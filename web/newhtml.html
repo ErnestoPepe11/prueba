@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+ <%@page contentType="text/html; charset=utf-8" import="Objetos.Persona"%>
+<html>
+
+
+<head>
+<title>Mi primer sitio JSP</title>
+</head>
+<body>
+
+<jsp:useBean id="persona" scope="page" class="Objetos.Persona" />
+<jsp:setProperty name="persona" property="nombre" value="Daniel" />
+<jsp:setProperty name="persona" property="ciudad" value="Santa Rosa" />
+<jsp:setProperty name="persona" property="id" value="12" />
+
+<h1>Datos de la persona:</h1>
+<p>Nombre: <jsp:getProperty name="persona" property="nombre" /></p>
+<p>Ciudad: <jsp:getProperty name="persona" property="ciudad" /></p>
+<p>Numero de identificacion: <jsp:getProperty name="persona" property="id" /></p>
+
+</body>
+</html>
